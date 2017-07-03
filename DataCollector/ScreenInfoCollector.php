@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Alpixel\AlpixelIntegrationBundle\DataCollector;
+namespace Alpixel\IntegrationBundle\DataCollector;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

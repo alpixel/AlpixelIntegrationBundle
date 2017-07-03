@@ -1,5 +1,5 @@
 services:
-    Alpixel\AlpixelIntegrationBundle\DataCollector\ScreenInfoCollector:
+    Alpixel\IntegrationBundle\DataCollector\ScreenInfoCollector:
         public: false
         autowire: true
         tags:
@@ -8,7 +8,7 @@ services:
                 template: 'AlpixelIntegrationBundle::screen_infos.html.twig'
                 id:       'alpixel.data_collector.integration.screen_infos'
 
-    Alpixel\AlpixelIntegrationBundle\DataCollector\IntegrationRoutingCollector:
+    Alpixel\IntegrationBundle\DataCollector\IntegrationRoutingCollector:
         public: false
         autowire: true
         tags:
