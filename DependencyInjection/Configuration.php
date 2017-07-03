@@ -1,6 +1,6 @@
 <?php
 
-namespace Alpixel\IntegrationBundle\DependencyInjection;
+namespace Alpixel\Bundle\IntegrationBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

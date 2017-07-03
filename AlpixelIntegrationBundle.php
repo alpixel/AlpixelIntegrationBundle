@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Alpixel\IntegrationBundle;
+namespace Alpixel\Bundle\IntegrationBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

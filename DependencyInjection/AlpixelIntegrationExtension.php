@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Alpixel\IntegrationBundle\DependencyInjection;
+namespace Alpixel\Bundle\IntegrationBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
