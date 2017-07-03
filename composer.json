@@ -1,0 +1,27 @@
+{
+  "name": "alpixel/integrationbundle",
+  "description": "This bundle is used by our team to easy integration",
+  "type": "symfony-bundle",
+  "keywords": [
+    "alpixel",
+    "symfony2",
+    "symfony",
+    "bundle"
+  ],
+  "homepage": "https://www.alpixel.fr",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "ALPIXEL",
+      "email": "contact@alpixel.fr"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+  },
+  "autoload": {
+    "psr-4": {
+      "Alpixel\\Bundle\\IntegrationBundle\\": ""
+    }
+  }
+}

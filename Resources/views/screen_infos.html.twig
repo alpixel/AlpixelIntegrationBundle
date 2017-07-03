@@ -1,0 +1,70 @@
+{% extends 'WebProfilerBundle:Profiler:layout.html.twig' %}
+
+{% block toolbar %}
+    {% set icon %}
+        <svg width="24" height="24" viewBox="0 0 2048 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M256 1536h768v-512h-768v512zm1024-512h512v-768h-768v256h96q66 0 113 47t47 113v352zm768-864v960q0 66-47 113t-113 47h-608v352q0 66-47 113t-113 47h-960q-66 0-113-47t-47-113v-960q0-66 47-113t113-47h608v-352q0-66 47-113t113-47h960q66 0 113 47t47 113z"
+                  fill="#fff"/>
+        </svg>
+        <span class="sf-toolbar-value screen-infos">
+            <span class="screen-less">~</span> - <span class="screen-width">~</span>px - "<span
+                    class="screen-media">~</span>" screen
+        </span>
+    {% endset %}
+
+    {% set text %}
+        <div class="sf-toolbar-info-piece screen-infos">
+            <b>Format</b>
+            <span class="sf-toolbar-status sf-toolbar-status-">
+                <span class="screen-less">~</span> - <span class="screen-width">~</span>px - "<span
+                        class="screen-media">~</span>" screen
+            </span>
+        </div>
+    {% endset %}
+    {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: false }) }}
+    <script>
+        (function ($) {
+            $(function () {
+                refreshScreenInfo();
+
+                $(window).on('resize', function (e) {
+                    refreshScreenInfo();
+                });
+            });
+
+            function refreshScreenInfo() {
+                var
+                    XSWidthMax = 359,
+                    SWidthMax = 767,
+                    MWidthMax = 989,
+                    LWidthMax = 1199;
+
+                var currentWindowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+                $('.screen-infos').find('.screen-width').text(currentWindowWidth);
+
+                if (currentWindowWidth > LWidthMax) {
+                    $('.screen-infos').find('.screen-media').text("XL");
+                    $('.screen-infos').find('.screen-less').text("._media-l-up");
+                }
+                else if (currentWindowWidth > MWidthMax && currentWindowWidth <= LWidthMax) {
+                    $('.screen-infos').find('.screen-media').text("L");
+                    $('.screen-infos').find('.screen-less').text("._media-m-up");
+                }
+                else if (currentWindowWidth > SWidthMax && currentWindowWidth <= MWidthMax) {
+                    $('.screen-infos').find('.screen-media').text("M");
+                    $('.screen-infos').find('.screen-less').text("._media-s-up");
+                }
+                else if (currentWindowWidth > XSWidthMax && currentWindowWidth <= SWidthMax) {
+                    $('.screen-infos').find('.screen-media').text("S");
+                    $('.screen-infos').find('.screen-less').text("._media-xs-up");
+                }
+                else {
+                    $('.screen-infos').find('.screen-media').text("XS");
+                }
+            }
+
+        })(jQuery);
+
+    </script>
+{% endblock %}

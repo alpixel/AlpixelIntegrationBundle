@@ -1,0 +1,18 @@
+services:
+    Alpixel\AlpixelIntegrationBundle\DataCollector\ScreenInfoCollector:
+        public: false
+        autowire: true
+        tags:
+            -
+                name:     data_collector
+                template: 'AlpixelIntegrationBundle::screen_infos.html.twig'
+                id:       'alpixel.data_collector.integration.screen_infos'
+
+    Alpixel\AlpixelIntegrationBundle\DataCollector\IntegrationRoutingCollector:
+        public: false
+        autowire: true
+        tags:
+            -
+                name:     data_collector
+                template: 'AlpixelIntegrationBundle::routing.html.twig'
+                id:       'alpixel.data_collector.integration.routing'
