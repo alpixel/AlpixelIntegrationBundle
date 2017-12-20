@@ -48,6 +48,12 @@ class IntegrationRoutingCollector extends DataCollector
         ];
     }
 
+    public function reset()
+    {
+        $this->data = [];
+    }
+
+
     public function getRoutes()
     {
         return $this->data['routes'];

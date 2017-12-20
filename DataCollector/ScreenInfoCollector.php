@@ -18,6 +18,11 @@ class ScreenInfoCollector extends DataCollector
         $this->data = [];
     }
 
+    public function reset()
+    {
+        $this->data = [];
+    }
+
     public function getName()
     {
         return 'alpixel.data_collector.integration.screen_infos';
